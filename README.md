@@ -1,8 +1,8 @@
 # Iseberg
+##### A modern Ruby Client for the Cisco Identity Services Engine (ISE) External RESTful Service (ERS) API
+***
+Iseberg provides a modern, programmatic way to interact with the ISE ERS API.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/iseberg`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -21,15 +21,13 @@ Or install it yourself as:
     $ gem install iseberg
 
 ## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+# Connect the client to your ISE PSN
+ise_client = Iseberg::Client.new(PSN_IP, Username, Password)
+# Get all endpoints known by ISE
+ise_client.endpoint.get_all
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/iseberg.
+Bug reports and pull requests are welcome on GitHub at https://github.com/abhid/iseberg.
